@@ -1,0 +1,9 @@
+基类的指针指向子类，如果调用delete，那么子类中的某些成员可能没有销毁
+所以为多态的基类声明一个virtual的析构函数，防止局部销毁的问题
+
+class BaseTimer
+{
+    public:
+        BaseTimer();
+        virtual ~BaseTimer();
+};
